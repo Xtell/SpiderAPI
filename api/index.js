@@ -1,1 +1,1 @@
-export {getUserToken } from './makeRequest.js'
+export {getUserToken } from './metods.js'

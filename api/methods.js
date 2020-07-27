@@ -30,3 +30,4 @@ export async function getUserToken(nickName, password) {
     //   return error;
     // });
 }
+export async function createUser()
