@@ -1,1 +1,1 @@
-export {getUserToken } from './metods.js'
+export {getUserToken } from './methods.js'
