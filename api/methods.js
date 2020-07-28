@@ -59,34 +59,47 @@ export async function getUserFriends(token, userId) {
 export async function addFriend(token, userId, friendId) {
   const data = {
     UserId: userId,
-    FriendId: friendId
+    FriendId: friendId,
   };
-  return await makeRequest("POST", "Users/add_friend", {
-    Authorization: "Bearer " + token, 
-  }, data);
+  return await makeRequest(
+    "POST",
+    "Users/add_friend",
+    {
+      Authorization: "Bearer " + token,
+    },
+    data
+  );
 }
 export async function deleteFriend(token, userId, friendId) {
   const data = {
     UserId: userId,
-    FriendId: friendId
+    FriendId: friendId,
   };
-  return await makeRequest("DELETE", "Users/delete_friend", {
-    Authorization: "Bearer " + token, 
-  }, data);
+  return await makeRequest(
+    "DELETE",
+    "Users/delete_friend",
+    {
+      Authorization: "Bearer " + token,
+    },
+    data
+  );
 }
 export async function createUser(name, lastName, nickName, password) {
   const data = {
     Name: name,
     LastName: lastName,
     Nickname: nickName,
-    Password: password
+    Password: password,
   };
-  return await makeRequest("POST", "Users/create", {
-    Authorization: "Bearer " + token
-  }, data);
+  return await makeRequest("POST", "Users/create", {}, data);
 }
 export async function updateUser(data) {
-  return await makeRequest("POST", "Users/update", {
-    Authorization: "Bearer " + token
-  }, data);
+  return await makeRequest(
+    "POST",
+    "Users/update",
+    {
+      Authorization: "Bearer " + token,
+    },
+    data
+  );
 }
